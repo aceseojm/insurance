@@ -1854,6 +1854,47 @@ body::before {
   margin-bottom: 18px;
 }
 
+.topic-page-hero {
+  background:
+    linear-gradient(180deg, rgba(46, 66, 112, 0.82), rgba(46, 66, 112, 0.56)),
+    var(--dark);
+}
+
+.premium-page-hero {
+  background:
+    linear-gradient(180deg, rgba(46, 66, 112, 0.82), rgba(46, 66, 112, 0.56)),
+    #48628d;
+}
+
+.topic-layout {
+  align-items: start;
+}
+
+.topic-rail {
+  display: grid;
+  gap: 18px;
+}
+
+.topic-rail .whitepaper-rail-card a {
+  color: inherit;
+}
+
+.topic-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.topic-guide-card {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.topic-guide-card .primary-button {
+  width: fit-content;
+}
+
 .whitepaper-richtext,
 .whitepaper-quote {
   display: grid;
