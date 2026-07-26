@@ -1866,6 +1866,18 @@ body::before {
     #48628d;
 }
 
+.medical-page-hero {
+  background:
+    linear-gradient(180deg, rgba(46, 66, 112, 0.82), rgba(46, 66, 112, 0.56)),
+    #4a6984;
+}
+
+.cancer-page-hero {
+  background:
+    linear-gradient(180deg, rgba(46, 66, 112, 0.82), rgba(46, 66, 112, 0.56)),
+    #5a5e88;
+}
+
 .topic-layout {
   align-items: start;
 }
