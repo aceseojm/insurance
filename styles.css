@@ -1588,7 +1588,7 @@ body::before {
 }
 
 .whitepaper-layout {
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: minmax(0, 1fr) 320px;
 }
 
 .whitepaper-teaser {
@@ -1965,8 +1965,8 @@ body::before {
 
 .topic-guide-section .whitepaper-intro h2 {
   margin: 14px 0 14px;
-  font-size: clamp(2.1rem, 4vw, 3.35rem);
-  line-height: 1.08;
+  font-size: var(--type-h2);
+  line-height: var(--leading-title);
   letter-spacing: -0.04em;
   color: rgba(255, 255, 255, 0.98);
   text-shadow: 0 14px 36px rgba(17, 28, 59, 0.22);
@@ -1975,8 +1975,8 @@ body::before {
 .topic-guide-section .whitepaper-intro p {
   max-width: 760px;
   margin: 0;
-  font-size: 1.08rem;
-  line-height: 1.8;
+  font-size: var(--type-body);
+  line-height: 1.7;
   color: rgba(239, 244, 255, 0.92);
 }
 
@@ -2010,15 +2010,15 @@ body::before {
 
 .topic-guide-card span {
   margin-bottom: 8px;
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: var(--type-h4);
+  line-height: 1.35;
   letter-spacing: -0.03em;
   color: rgba(255, 255, 255, 0.98);
 }
 
 .topic-guide-card p {
-  font-size: 1.04rem;
-  line-height: 1.8;
+  font-size: var(--type-body);
+  line-height: 1.7;
   color: rgba(236, 242, 255, 0.86);
 }
 
