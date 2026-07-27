@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>김원자 전문 FP</title>
+    <link>https://kimwonja.com/</link>
+    <description>김원자 전문 FP의 보험 점검 가이드와 생명보험 활용 콘텐츠</description>
+    <language>ko</language>
+    <lastBuildDate>Mon, 27 Jul 2026 00:00:00 +0900</lastBuildDate>
+
+    <item>
+      <title>1:1 보험 점검 서비스 | 김원자 전문 FP</title>
+      <link>https://kimwonja.com/</link>
+      <description>보험료는 줄이고, 필요한 보장은 남기세요. 교보생명 전문 FP 김원자가 1:1 보험 점검 상담을 도와드립니다.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://kimwonja.com/</guid>
+    </item>
+
+    <item>
+      <title>알고보면 유익한 생명보험 활용백서</title>
+      <link>https://kimwonja.com/whitepaper.html</link>
+      <description>월간 생명보험 활용 콘텐츠를 통해 보장 점검 포인트와 상담 인사이트를 확인해보세요.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://kimwonja.com/whitepaper.html</guid>
+    </item>
+
+    <item>
+      <title>30대 보험 점검 | 김원자 전문 FP</title>
+      <link>https://kimwonja.com/30s-insurance-check.html</link>
+      <description>결혼, 출산, 대출, 소득 변화가 많은 30대라면 지금 보험 점검이 필요합니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://kimwonja.com/30s-insurance-check.html</guid>
+    </item>
+
+    <item>
+      <title>보험료 줄이는 방법 | 김원자 전문 FP</title>
+      <link>https://kimwonja.com/reduce-insurance-premium.html</link>
+      <description>보험료가 부담될 때 무조건 해지보다 먼저 봐야 할 체크포인트를 정리했습니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://kimwonja.com/reduce-insurance-premium.html</guid>
+    </item>
+
+    <item>
+      <title>실손보험 점검 | 김원자 전문 FP</title>
+      <link>https://kimwonja.com/silson-insurance-check.html</link>
+      <description>실손보험이 여러 건 있거나 오래전에 가입한 실손보험을 유지 중이라면 지금 점검이 필요합니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://kimwonja.com/silson-insurance-check.html</guid>
+    </item>
+
+    <item>
+      <title>암보험 점검 | 김원자 전문 FP</title>
+      <link>https://kimwonja.com/cancer-insurance-check.html</link>
+      <description>암보험은 진단비, 유사암 보장, 갱신형 구조를 함께 봐야 합니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://kimwonja.com/cancer-insurance-check.html</guid>
+    </item>
+  </channel>
+</rss>
