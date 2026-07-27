@@ -2048,6 +2048,35 @@ body::before {
   gap: 10px;
 }
 
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.faq-card {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(48, 70, 116, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 247, 255, 0.96));
+  box-shadow:
+    0 18px 40px rgba(84, 110, 164, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.faq-card h3 {
+  margin: 0 0 12px;
+  font-size: var(--type-h4);
+  color: var(--ink);
+}
+
+.faq-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 .whitepaper-richtext p,
 .whitepaper-quote p {
   margin: 0;
