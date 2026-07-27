@@ -1937,7 +1937,7 @@ body::before {
 .topic-guide-section .whitepaper-shell {
   position: relative;
   z-index: 1;
-  padding: 32px;
+  padding: 24px;
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background:
@@ -1964,7 +1964,7 @@ body::before {
 }
 
 .topic-guide-section .whitepaper-intro h2 {
-  margin: 14px 0 14px;
+  margin: 10px 0 10px;
   font-size: var(--type-h2);
   line-height: var(--leading-title);
   letter-spacing: -0.04em;
@@ -1982,10 +1982,10 @@ body::before {
 
 .topic-guide-card {
   display: grid;
-  gap: 16px;
+  gap: 14px;
   align-content: start;
   min-height: 100%;
-  padding: 26px;
+  padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
   background:
@@ -2009,7 +2009,7 @@ body::before {
 }
 
 .topic-guide-card span {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-size: var(--type-h4);
   line-height: 1.35;
   letter-spacing: -0.03em;
@@ -2018,13 +2018,15 @@ body::before {
 
 .topic-guide-card p {
   font-size: var(--type-body);
-  line-height: 1.7;
+  line-height: 1.65;
   color: rgba(236, 242, 255, 0.86);
 }
 
 .topic-guide-card .primary-button {
   width: fit-content;
-  min-width: 168px;
+  min-width: 138px;
+  min-height: 48px;
+  padding: 0 22px;
   margin-top: auto;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(223, 232, 255, 0.92)),
