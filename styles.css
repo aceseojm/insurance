@@ -2249,33 +2249,36 @@ body::before {
   min-height: 56px;
   padding: 14px 16px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  color: inherit;
+  border: 1px solid rgba(73, 100, 158, 0.22);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
   font: inherit;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 18px rgba(84, 110, 164, 0.06);
 }
 
 .lead-form input::placeholder,
 .lead-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(37, 54, 95, 0.45);
 }
 
 .section:nth-of-type(odd) .lead-form input,
 .section:nth-of-type(odd) .lead-form select,
 .section:nth-of-type(odd) .lead-form textarea {
-  border-color: rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(73, 100, 158, 0.2);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .section:nth-of-type(odd) .lead-form input::placeholder,
 .section:nth-of-type(odd) .lead-form textarea::placeholder {
-  color: rgba(31, 46, 92, 0.55);
+  color: rgba(31, 46, 92, 0.45);
 }
 
 .lead-form input:focus,
 .lead-form select:focus,
 .lead-form textarea:focus {
-  outline: 2px solid rgba(138, 130, 245, 0.38);
+  outline: 2px solid rgba(86, 117, 189, 0.42);
   outline-offset: 0;
 }
 
