@@ -259,7 +259,7 @@ body::before {
 .section:nth-of-type(even) .form-disclaimer,
 .section:nth-of-type(even) .footer p,
 .section:nth-of-type(even) .trust-strip p {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(37, 54, 95, 0.78);
 }
 
 .hero-stage-note p {
@@ -292,13 +292,13 @@ body::before {
   min-height: 36px;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(48, 70, 116, 0.12);
+  background: rgba(255, 255, 255, 0.72);
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(37, 54, 95, 0.82);
 }
 
 .hero h1 {
@@ -313,7 +313,7 @@ body::before {
   max-width: 860px;
   margin: 0;
   font-size: var(--type-body-lg);
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(37, 54, 95, 0.82);
   line-height: var(--leading-body);
 }
 
@@ -333,14 +333,14 @@ body::before {
   min-height: 84px;
   padding: 18px 18px 18px 52px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(48, 70, 116, 0.1);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(239, 245, 255, 0.92)),
     rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(37, 54, 95, 0.9);
   font-weight: 700;
   line-height: 1.35;
-  box-shadow: 0 10px 22px rgba(55, 74, 124, 0.1);
+  box-shadow: 0 10px 22px rgba(55, 74, 124, 0.08);
 }
 
 .hero-proof li::before {
@@ -352,9 +352,9 @@ body::before {
   height: 18px;
   border-radius: 4px;
   transform: translateY(-50%);
-  border: 1.5px solid rgba(255, 255, 255, 0.48);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(48, 70, 116, 0.3);
+  background: rgba(93, 117, 176, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38);
 }
 
 .hero-proof li::after {
@@ -364,8 +364,8 @@ body::before {
   top: 50%;
   width: 5px;
   height: 9px;
-  border-right: 2px solid var(--white);
-  border-bottom: 2px solid var(--white);
+  border-right: 2px solid #3a5286;
+  border-bottom: 2px solid #3a5286;
   transform: translateY(-60%) rotate(38deg);
 }
 
@@ -377,14 +377,14 @@ body::before {
   min-height: 52px;
   padding: 12px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(48, 70, 116, 0.12);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
-    linear-gradient(135deg, rgba(138, 130, 245, 0.08), rgba(246, 199, 135, 0.04)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(239, 245, 255, 0.92)),
+    linear-gradient(135deg, rgba(138, 130, 245, 0.06), rgba(246, 199, 135, 0.04)),
     rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(37, 54, 95, 0.88);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.52),
     0 8px 20px rgba(37, 54, 95, 0.08);
   overflow: hidden;
 }
@@ -444,9 +444,9 @@ body::before {
 }
 
 .secondary-button {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(44, 68, 123, 0.94);
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  border: 1px solid rgba(44, 68, 123, 0.18);
 }
 
 .hero-actions .primary-button,
@@ -459,12 +459,12 @@ body::before {
 
 .hero-actions .primary-button {
   background:
-    linear-gradient(135deg, rgba(41, 64, 116, 0.98) 0%, rgba(88, 117, 182, 0.96) 52%, rgba(232, 240, 255, 0.92) 100%);
+    linear-gradient(135deg, rgba(41, 64, 116, 0.98) 0%, rgba(70, 98, 160, 0.96) 100%);
 }
 
 .hero-actions .secondary-button {
   background:
-    linear-gradient(135deg, rgba(44, 68, 123, 0.96) 0%, rgba(89, 117, 182, 0.94) 54%, rgba(224, 235, 255, 0.9) 100%);
+    linear-gradient(135deg, rgba(56, 78, 130, 0.96) 0%, rgba(86, 112, 172, 0.94) 100%);
 }
 
 .hero-actions .primary-button::before,
