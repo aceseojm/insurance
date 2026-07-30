@@ -41,6 +41,20 @@ function getSourcePage() {
   return window.location.href;
 }
 
+function getAttributionData() {
+  const params = new URLSearchParams(window.location.search);
+
+  return {
+    landingPath: window.location.pathname || "/",
+    referrer: document.referrer || "direct",
+    utmSource: params.get("utm_source") || "",
+    utmMedium: params.get("utm_medium") || "",
+    utmCampaign: params.get("utm_campaign") || "",
+    utmContent: params.get("utm_content") || "",
+    utmTerm: params.get("utm_term") || "",
+  };
+}
+
 function trackEvent(name, detail = {}) {
   const payload = {
     name,
@@ -50,6 +64,11 @@ function trackEvent(name, detail = {}) {
 
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push(payload);
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", name, detail);
+  }
+
   console.info("[funnel-event]", payload);
 }
 
@@ -274,6 +293,7 @@ form?.addEventListener("submit", async (event) => {
   const data = Object.fromEntries(new FormData(form).entries());
   const payload = {
     ...data,
+    ...getAttributionData(),
     privacy: data.privacy ? "동의" : "",
     submittedAt: new Date().toISOString(),
     sourcePage: getSourcePage(),
@@ -289,6 +309,12 @@ form?.addEventListener("submit", async (event) => {
 
   saveLead(payload);
   trackEvent("lead_submitted", { interest: data.interest, ageGroup: data.ageGroup });
+  trackEvent("generate_lead", {
+    formType: "consultation",
+    interest: data.interest,
+    ageGroup: data.ageGroup,
+    contactMethod: data.contactMethod,
+  });
 
   form.reset();
   updateStep(1);
@@ -320,6 +346,7 @@ happyRichForm?.addEventListener("submit", async (event) => {
   const data = Object.fromEntries(new FormData(happyRichForm).entries());
   const payload = {
     ...data,
+    ...getAttributionData(),
     privacy: data.privacy ? "동의" : "",
     submittedAt: new Date().toISOString(),
     sourcePage: getSourcePage(),
@@ -335,6 +362,10 @@ happyRichForm?.addEventListener("submit", async (event) => {
 
   saveHappyRichSubscriber(payload);
   trackEvent("happy_rich_submitted", { cityAddress: data.address });
+  trackEvent("sign_up", {
+    formType: "happy-rich",
+    addressProvided: Boolean(data.address),
+  });
 
   happyRichForm.reset();
   showToast("행복한 부자 신청이 접수되었습니다. 매월 유용한 정보를 보내드릴게요.");
@@ -343,3 +374,12 @@ happyRichForm?.addEventListener("submit", async (event) => {
 });
 
 trackEvent("page_view", { page: "insurance-funnel-landing" });
+
+document.querySelectorAll(".topic-guide-card a, .whitepaper-teaser a, .faq-card a, .hero-masthead-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    trackEvent("content_click", {
+      href: link.getAttribute("href") || "",
+      label: link.textContent.trim(),
+    });
+  });
+});

@@ -752,6 +752,54 @@ body::before {
   background: transparent;
 }
 
+.join-path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.join-path-card,
+.join-path-banner {
+  padding: 28px;
+  border-radius: 26px;
+  border: 1px solid rgba(73, 100, 158, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(242, 247, 255, 0.94));
+  box-shadow:
+    0 18px 42px rgba(84, 110, 164, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.join-path-card {
+  display: grid;
+  gap: 10px;
+}
+
+.join-path-card strong,
+.join-path-banner strong {
+  font-size: var(--type-h4);
+  line-height: 1.4;
+}
+
+.join-path-card p,
+.join-path-banner p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.join-path-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.join-path-banner .primary-button {
+  flex-shrink: 0;
+}
+
 .process-grid {
   grid-template-columns: 1fr;
 }
@@ -1588,7 +1636,8 @@ body::before {
 }
 
 .whitepaper-layout {
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  align-items: start;
 }
 
 .whitepaper-teaser {
@@ -1611,6 +1660,8 @@ body::before {
   display: grid;
   align-content: start;
   gap: 18px;
+  position: sticky;
+  top: 24px;
 }
 
 .whitepaper-rail-card,
@@ -1691,6 +1742,7 @@ body::before {
 .whitepaper-viewer {
   display: grid;
   gap: 18px;
+  min-width: 0;
 }
 
 .whitepaper-teaser-copy {
@@ -2559,6 +2611,7 @@ body::before {
   .whitepaper-grid,
   .whitepaper-footer,
   .trust-strip,
+  .join-path-grid,
   .pain-grid,
   .check-grid,
   .process-grid {
@@ -2755,8 +2808,13 @@ body::before {
   .hero-actions,
   .form-actions,
   .form-progress,
+  .join-path-banner,
   .whitepaper-hero {
     flex-direction: column;
+  }
+
+  .join-path-banner .primary-button {
+    width: 100%;
   }
 
   .sticky-cta {
