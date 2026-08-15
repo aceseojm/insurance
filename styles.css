@@ -1207,78 +1207,52 @@ body::before {
 
 .process-split {
   position: relative;
-  display: block;
-  width: 100vw;
-  min-height: 92svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+  align-items: stretch;
+  width: min(100vw - 48px, 1880px);
+  min-height: 0;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   overflow: hidden;
-  padding: 56px 0 56px;
+  padding: 0 0 84px;
+  border-radius: 36px;
+  background:
+    linear-gradient(180deg, rgba(249, 251, 255, 0.98), rgba(236, 242, 255, 0.94)),
+    rgba(255, 255, 255, 0.86);
+  box-shadow:
+    0 28px 68px rgba(62, 82, 132, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88);
 }
 
 .process-section {
-  padding-top: 0;
+  padding-top: 12px;
   padding-bottom: 0;
   background: transparent;
 }
 
 .process-column {
   position: relative;
-  left: auto;
   z-index: 2;
-  width: min(46vw, 760px);
+  width: auto;
   display: grid;
-  gap: 0;
-  margin-left: var(--page-gutter);
+  align-content: start;
+  gap: 28px;
+  padding: 72px 0 0 clamp(40px, 5vw, 98px);
+  margin-left: 0;
 }
 
 .process-figure {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  min-height: 0;
-  border-radius: 0;
+  position: relative;
+  min-height: 760px;
+  border-radius: 0 36px 36px 0;
   border: 0;
   background-image:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.86) 0%,
-      rgba(255, 255, 255, 0.78) 28%,
-      rgba(255, 255, 255, 0.22) 56%,
-      rgba(255, 255, 255, 0.04) 100%
-    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%),
     url("./consul.png");
   background-position: center center;
   background-size: cover;
   box-shadow: none;
-  z-index: 0;
-}
-
-.process-note {
-  position: absolute;
-  left: var(--page-gutter);
-  bottom: 44px;
-  z-index: 1;
-  margin: 0;
-  max-width: min(42vw, 640px);
-  padding: 22px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(241, 246, 255, 0.84)),
-    rgba(255, 255, 255, 0.2);
-  color: rgba(37, 54, 95, 0.88);
-  line-height: 1.8;
-  box-shadow:
-    0 18px 34px rgba(76, 95, 148, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.section:nth-of-type(odd) .process-note {
-  color: rgba(37, 54, 95, 0.82);
 }
 
 .process-section .section-heading h2,
@@ -1286,30 +1260,43 @@ body::before {
   color: var(--ink);
 }
 
+.process-section .section-heading {
+  display: grid;
+  gap: 12px;
+}
+
+.process-section .section-heading h2 {
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
 .process-section .section-heading p {
-  max-width: 620px;
+  max-width: 760px;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
   color: rgba(37, 54, 95, 0.82);
 }
 
 .process-section .process-grid {
-  max-width: 620px;
-  background: rgba(37, 54, 95, 0.12);
-  box-shadow: 0 20px 44px rgba(37, 54, 95, 0.12);
+  max-width: min(100%, 880px);
+  border-radius: 32px;
+  background: rgba(214, 223, 245, 0.62);
+  box-shadow: 0 22px 48px rgba(62, 82, 132, 0.12);
 }
 
 .process-card.process-card-group {
-  border-radius: 28px;
+  border-radius: 32px;
   overflow: hidden;
 }
 
 .process-section .process-step-list {
-  background: rgba(37, 54, 95, 0.1);
+  background: rgba(214, 223, 245, 0.78);
 }
 
 .process-section .process-step-item,
 .section:nth-of-type(odd) .process-section .process-step-item,
 .section:nth-of-type(even) .process-section .process-step-item {
-  background: rgba(248, 250, 255, 0.9);
+  background: rgba(230, 236, 249, 0.96);
 }
 
 .process-section .process-step-item span {
@@ -1350,6 +1337,24 @@ body::before {
 
 .process-section .process-step-copy p {
   color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.process-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 3;
+  transform: translateX(-50%);
+}
+
+.process-cta .primary-button {
+  min-width: min(92vw, 560px);
+  padding: 22px 44px;
+  box-shadow:
+    0 20px 36px rgba(76, 95, 148, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .process-mobile-heading {
@@ -2136,6 +2141,10 @@ body::before {
 
 .topic-layout {
   align-items: start;
+}
+
+.topic-layout-reverse {
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
 }
 
 .topic-rail {
@@ -2933,12 +2942,16 @@ body::before {
   }
 
   .process-split {
+    grid-template-columns: 1fr;
     min-height: auto;
-    padding: 52px 0 0;
+    width: calc(100% + (var(--page-gutter) * 2));
+    margin-left: calc(var(--page-gutter) * -1);
+    margin-right: calc(var(--page-gutter) * -1);
+    padding: 0 0 86px;
+    border-radius: 0;
   }
 
   .process-column {
-    position: static;
     width: auto;
     margin-left: 0;
     padding: 52px var(--page-gutter) 0;
@@ -2946,24 +2959,16 @@ body::before {
 
   .process-figure {
     position: relative;
-    inset: auto;
-    min-height: 62svh;
+    min-height: 58svh;
+    border-radius: 0;
     background-image:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.74) 0%,
-        rgba(255, 255, 255, 0.38) 34%,
-        rgba(255, 255, 255, 0.12) 62%,
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.08) 50%,
         rgba(255, 255, 255, 0.02) 100%
       ),
       url("./consul.png");
-  }
-
-  .process-note {
-    left: var(--page-gutter);
-    right: var(--page-gutter);
-    bottom: 28px;
-    max-width: 560px;
   }
 
   .advisor-figure {
@@ -3048,77 +3053,21 @@ body::before {
   }
 
   .process-column {
-    padding: 164px var(--page-gutter-mobile) 0;
-  }
-
-  .process-mobile-heading {
-    display: grid;
-    gap: 10px;
-    position: absolute;
-    top: 34px;
-    left: var(--page-gutter-mobile);
-    right: var(--page-gutter-mobile);
-    z-index: 2;
-    max-width: 340px;
-  }
-
-  .process-column > .section-heading {
-    display: none;
-  }
-
-  .process-mobile-heading h2,
-  .process-mobile-heading p {
-    margin: 0;
-  }
-
-  .process-mobile-heading h2 {
-    font-size: clamp(1.9rem, 8vw, 2.45rem);
-    line-height: 1.04;
-    letter-spacing: -0.05em;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.99) 0%,
-      rgba(247, 241, 255, 0.98) 30%,
-      rgba(213, 197, 255, 0.98) 62%,
-      rgba(255, 255, 255, 0.99) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 26px rgba(117, 102, 223, 0.18);
-  }
-
-  .process-mobile-heading p {
-    font-size: 0.98rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.92);
-    max-width: 280px;
-    text-shadow: 0 4px 16px rgba(87, 75, 187, 0.2);
+    padding: 34px var(--page-gutter-mobile) 0;
+    gap: 22px;
   }
 
   .process-figure {
     position: relative;
-    inset: auto;
-    min-height: 76svh;
+    min-height: 42svh;
     background-image:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 255, 255, 0.56) 34%,
-        rgba(255, 255, 255, 0.18) 60%,
-        rgba(255, 255, 255, 0.04) 100%
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.02) 100%
       ),
       url("./consul.png");
-  }
-
-  .process-note {
-    left: var(--page-gutter-mobile);
-    right: var(--page-gutter-mobile);
-    bottom: 18px;
-    max-width: none;
-    padding: 18px 18px;
-    border-radius: 20px;
-    line-height: 1.7;
   }
 
   .advisor-figure {
@@ -3258,5 +3207,18 @@ body::before {
     width: 40px;
     height: 40px;
     font-size: 0.95rem;
+  }
+
+  .process-cta {
+    left: var(--page-gutter-mobile);
+    right: var(--page-gutter-mobile);
+    bottom: 18px;
+    transform: none;
+  }
+
+  .process-cta .primary-button {
+    width: 100%;
+    min-width: 0;
+    padding: 18px 22px;
   }
 }
