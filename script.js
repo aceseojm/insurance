@@ -20,6 +20,7 @@ const panels = [...document.querySelectorAll(".form-panel")];
 const progressSteps = [...document.querySelectorAll(".progress-step")];
 const toast = document.querySelector("#toast");
 const whitepapers = window.whitepaperLibrary || [];
+const guideLibrary = window.guideLibrary || [];
 
 function getSourcePage() {
   const pageLabel = config.sourcePageLabel || "insurance-landing";
@@ -218,6 +219,14 @@ function renderWhitepaperTeaser() {
   }
 }
 
+function renderRichTextList(container, lines = []) {
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = lines.map((line) => `<p>${line}</p>`).join("");
+}
+
 document.querySelectorAll("[data-scroll-target]").forEach((button) => {
   button.addEventListener("click", () => {
     const selector = button.getAttribute("data-scroll-target");
@@ -375,7 +384,7 @@ happyRichForm?.addEventListener("submit", async (event) => {
 
 trackEvent("page_view", { page: "insurance-funnel-landing" });
 
-document.querySelectorAll(".topic-guide-card a, .whitepaper-teaser a, .faq-card a, .hero-masthead-link").forEach((link) => {
+document.querySelectorAll(".whitepaper-teaser a, .faq-card a, .hero-masthead-link, #topic-guide-cta").forEach((link) => {
   link.addEventListener("click", () => {
     trackEvent("content_click", {
       href: link.getAttribute("href") || "",
