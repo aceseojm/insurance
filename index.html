@@ -164,6 +164,12 @@
                 "position": 4,
                 "name": "암보험 점검",
                 "url": "https://kimwonja.com/cancer-insurance-check.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "보험 리모델링 체크리스트 7가지",
+                "url": "https://kimwonja.com/insurance-remodeling-checklist.html"
               }
             ]
           },
@@ -188,30 +194,34 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260815-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260908-6" />
   </head>
   <body>
     <div class="page-shell">
       <header class="hero" id="top">
         <div class="hero-masthead">
-          <div class="hero-masthead-copy">
-            <span>INSURANCE CHECK SERVICE</span>
-            <span>KYOBOLIFE PLANNER KIM WONJA</span>
-          </div>
-          <div class="hero-masthead-actions">
+          <a class="hero-masthead-copy" href="./index.html" aria-label="김원자 FP 홈">
+            <strong>KIM WONJA FP</strong>
+            <span>INSURANCE PLANNER</span>
+          </a>
+          <button class="hero-menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="hero-masthead-actions" aria-label="주요 메뉴">
+            <a class="button-link hero-masthead-link hero-masthead-current" href="./index.html" aria-current="page">홈</a>
             <a class="secondary-button button-link hero-masthead-link" href="./guide-archive.html">
-              보험 가이드
+              보험가이드
             </a>
             <a class="secondary-button button-link hero-masthead-link" href="#whitepaper">
               활용백서
             </a>
-            <a class="secondary-button button-link hero-masthead-link" href="#lead-form">
-              상담 신청
-            </a>
             <a class="secondary-button button-link hero-masthead-link" href="#happy-rich">
               행복한 부자
             </a>
-          </div>
+            <a class="secondary-button button-link hero-masthead-link" href="#lead-form">
+              상담신청
+            </a>
+          </nav>
         </div>
 
         <div class="hero-grid">
@@ -856,6 +866,7 @@
       <footer class="footer">
         <p>교보생명 전문 FP 김원자 | 1:1 보험 점검 서비스</p>
         <a href="./advisor.html">김원자 FP 소개</a>
+        <a href="./insurance-remodeling-checklist.html">보험 리모델링 체크리스트</a>
         <a href="#top">맨 위로 이동</a>
       </footer>
     </div>
@@ -867,8 +878,9 @@
     </div>
 
     <script src="./whitepaper-data.js?v=20260730-2"></script>
-    <script src="./guide-data.js?v=20260815-1"></script>
+    <script src="./guide-data.js?v=20260908-1"></script>
     <script src="./site-config.js?v=20260718-1"></script>
     <script src="./script.js?v=20260727-2"></script>
+    <script src="./header.js?v=20260908-1"></script>
   </body>
 </html>
